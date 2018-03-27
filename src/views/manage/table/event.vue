@@ -12,7 +12,9 @@ export default {
   data () {
     return {
       data: {},
-      type: 'event'
+      type: 'event',
+      name: '事件',
+      search: '/manage/eventState'
     }
   },
   mounted () {

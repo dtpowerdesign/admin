@@ -45,6 +45,8 @@ export default {
         return callback(new Error('账号不能为空'))
       } else if (!re.test(value)) {
         return callback(new Error('账号只能为手机号或者邮箱'))
+      } else if (!this.$preSQL.pre(value)) {
+        callback(new Error('非法字符串'))
       } else {
         callback()
       }
@@ -56,7 +58,11 @@ export default {
         if (this.Form.checkPass !== '') {
           this.$refs.manageregister.validateField('checkPass')
         }
-        callback()
+        if (!this.$preSQL.pre(value)) {
+          callback(new Error('非法字符串'))
+        } else {
+          callback()
+        }
       }
     }
     var validatePass2 = (rule, value, callback) => {
@@ -64,6 +70,8 @@ export default {
         callback(new Error('请再次输入密码'))
       } else if (value !== this.Form.pass) {
         callback(new Error('两次输入密码不一致!'))
+      } else if (!this.$preSQL.pre(value)) {
+        callback(new Error('非法字符串'))
       } else {
         callback()
       }
@@ -73,6 +81,8 @@ export default {
         callback(new Error('验证码不能为空'))
       } else if (value !== this.Form.returnCheck) {
         callback(new Error('请输入与收到短信同样的的验证码'))
+      } else if (!this.$preSQL.pre(value)) {
+        callback(new Error('非法字符串'))
       } else {
         callback()
       }
@@ -82,6 +92,8 @@ export default {
         return callback(new Error('名字不能为空'))
       } else if (!/^[\u4E00-\u9FA5\uf900-\ufa2d·s]{2,20}$/.test(value)) {
         return callback(new Error('您输入的姓名不合法'))
+      } else if (!this.$preSQL.pre(value)) {
+        callback(new Error('非法字符串'))
       } else {
         callback()
       }

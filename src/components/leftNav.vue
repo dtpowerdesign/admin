@@ -7,7 +7,7 @@
       background-color="#4d83e7"
       text-color="#fff"
       active-background-color="#409EFF"
-      :default-openeds="['table']"
+      :default-openeds="['search']"
       unique-opened>
       <el-submenu index="table">
         <template slot="title">
@@ -36,6 +36,20 @@
           <el-menu-item index="/manage/totalMsg">统计信息</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
+     <el-submenu index="search">
+        <template slot="title">
+          <i class="icon el-input__icon el-icon-search"></i>
+          <span class="fontBig">查询相关信息</span>
+        </template>
+        <el-menu-item-group>
+          <el-menu-item index="/manage/puserState">查询个人用户状态</el-menu-item>
+          <el-menu-item index="/manage/cuserState">查询企业用户状态</el-menu-item>
+          <el-menu-item index="/manage/contractState">查询合同</el-menu-item>
+          <el-menu-item index="/manage/eventState">查询事件</el-menu-item>
+          <el-menu-item index="/manage/invoiceState">查询账单</el-menu-item>
+          <el-menu-item index="/manage/projectState">查询项目状态</el-menu-item>
+        </el-menu-item-group>
+      </el-submenu>      
       <el-submenu index="seletData">
         <template slot="title">
           <i class="icon iconfont icon-leibie"></i>
@@ -45,8 +59,26 @@
           <el-menu-item index="/manage/categorys">类别</el-menu-item>
           <el-menu-item index="/manage/types">类型</el-menu-item>
           <el-menu-item index="/manage/majors">专业</el-menu-item>
+          <el-menu-item index="/manage/designProcess">设计阶段</el-menu-item>
+          <el-menu-item index="/manage/duties">角色</el-menu-item>
+          <el-menu-item index="/manage/sizeAndCapacitys">规模单位</el-menu-item>
+          <el-menu-item index="/manage/payScale">付款比例</el-menu-item>
+          <el-menu-item index="/manage/projectNowState">项目目前状态</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
+      <el-submenu index="upload">
+        <template slot="title">
+          <i class="icon iconfont icon-leibie"></i>
+          <span class="fontBig">帮助文档</span>
+        </template>
+        <el-menu-item-group>
+          <el-menu-item index="/manage/protocl">平台协议</el-menu-item>
+          <el-menu-item index="/manage/taskbasemsg">任务基本信息</el-menu-item>
+          <el-menu-item index="/manage/projectrequriment">项目资质要求</el-menu-item>
+          <el-menu-item index="/manage/payabout">付款相关</el-menu-item>
+          <el-menu-item index="/manage/resultrequriment">项目设计成果要求</el-menu-item>
+        </el-menu-item-group>
+      </el-submenu>      
       <el-submenu index="advanced">
         <template slot="title">
           <i class="icon iconfont icon-leibie"></i>

@@ -12,7 +12,9 @@ export default {
   data () {
     return {
       data: {},
-      type: 'project'
+      type: 'project',
+      name: '项目',
+      search: '/manage/projectState'
     }
   },
   mounted () {

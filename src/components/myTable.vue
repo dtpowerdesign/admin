@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div v-if="$parent.search"><el-button @click="$router.push($parent.search)" type="info">点我搜索{{$parent.name}}</el-button></div>
     <el-table :data="table" style="width: 100%">
       <el-table-column label="表头显示的内容">
         <template slot-scope="scope">
@@ -38,9 +39,9 @@
           </el-tooltip>
         </template>
       </el-table-column>
-      <el-table-column prop="show" label="是否公开显示出来">
+      <el-table-column prop="show" label="是否在后台管理搜索结果中显示出来">
         <template slot-scope="scope">
-          <el-tooltip  effect="dark" content="是否为公开显示出来" placement="top-start">
+          <el-tooltip  effect="dark" content="是否在后台管理搜索结果中显示出来" placement="top-start">
             <el-switch style="display: block" v-model="scope.row.show" active-color="#13ce66" inactive-color="#ff4949" active-text="是" inactive-text="否"></el-switch>
           </el-tooltip>
         </template>

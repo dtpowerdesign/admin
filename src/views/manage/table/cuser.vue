@@ -12,7 +12,9 @@ export default {
   data () {
     return {
       data: {},
-      type: 'cuser'
+      type: 'cuser',
+      name: '企业用户',
+      search: '/manage/cuserState'
     }
   },
   mounted () {

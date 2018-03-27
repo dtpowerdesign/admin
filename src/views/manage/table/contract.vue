@@ -12,7 +12,9 @@ export default {
   data () {
     return {
       data: {},
-      type: 'contract'
+      type: 'contract',
+      name: '合同',
+      search: '/manage/contractState'
     }
   },
   mounted () {

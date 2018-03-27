@@ -12,7 +12,9 @@ export default {
   data () {
     return {
       data: {},
-      type: 'puser'
+      type: 'puser',
+      name: '个人用户',
+      search: '/manage/puserState'
     }
   },
   mounted () {

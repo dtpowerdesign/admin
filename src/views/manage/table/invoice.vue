@@ -12,7 +12,9 @@ export default {
   data () {
     return {
       data: {},
-      type: 'invoice'
+      type: 'invoice',
+      name: '账单',
+      search: '/manage/invoiceState'
     }
   },
   mounted () {
